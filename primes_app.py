@@ -16,18 +16,19 @@ st.write("""
 
 
     
-num = st.number_input("Enter a number between 2 and 10000", 2, 10000, 20, step = 5 )
+n = st.number_input("Enter a number between 2 and 10000", 2, 10000, 20, step = 5 )
 
-primes = [2]
-numbers_list =np.arange(2, num).tolist()
-for num in numbers_list:
-    nums_LT_input = np.arange(2, num+1).tolist()
-    for x in nums_LT_input:
-        if num % x == 0:
-            break
+n = st.number_input("Enter a number between 2 and 10000", 2, 10000, 50, step = 5 )
+
+
+list_of_primes = []
+for num in range(n):
+    if num >= 2:
+        for x in range (2, num):
+            if num % x == 0:
+                break
         else:
-            primes.append(num)
-            break
-st.write (
-    f" **List of primes less than {num+1} are:** \n {primes}")
+            list_of_primes.append(num)
 
+st.write (
+    f" **List of primes less than {n+1} are:** \n {list_of_primes}")
