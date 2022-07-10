@@ -16,7 +16,6 @@ st.write("""
 
 
     
-n = st.number_input("Enter a number between 2 and 10000", 2, 10000, 20, step = 5 )
 
 n = st.number_input("Enter a number between 2 and 10000", 2, 10000, 50, step = 5 )
 
