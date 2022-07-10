@@ -16,7 +16,7 @@ st.write("""
 
 
     
-num = st.number_input("**Enter a number between 2 and 10000**", 2, 10000, 20, step = 5 )
+num = st.number_input("Enter a number between 2 and 10000", 2, 10000, 20, step = 5 )
 
 primes = [2]
 numbers_list =np.arange(2, num).tolist()
