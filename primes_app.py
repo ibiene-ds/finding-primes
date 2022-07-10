@@ -17,7 +17,7 @@ st.write("""
 
     
 
-n = st.number_input("Enter a number between 2 and 1000000", 2, 1000000, 50, step = 5 )
+n = st.number_input("Enter a number between 2 and 100000", 2, 100000, 50, step = 5 )
 
 # number range to be checked
 number_range = set(range(2, n+1))
