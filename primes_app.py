@@ -35,5 +35,5 @@ while number_range:
 prime_count = len(primes_list)
 largest_prime = max(primes_list)
 st.write (f"There are {prime_count} prime numbers between 1 and {n}, the largest of which is {largest_prime} \n")
-st.write (print (primes_list))
+st.write (f"List of primes are: {primes_list}")
 
