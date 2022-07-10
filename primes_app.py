@@ -18,15 +18,26 @@ st.write("""
     
 n = st.number_input("Enter a number between 2 and 10000", 2, 10000, 50, step = 5 )
 
-list_of_primes = []
-for num in range(n):
-    if num >= 2:
-        for x in range (2, num):
-            if num % x == 0:
-                break
-        else:
-            list_of_primes.append(num)
 
-st.write (
-    f" **List of primes less than {n+1} are:** \n {list_of_primes}")
+# number range to be checked
+number_range = set(range(2, n+1))
+
+# empty list to append discovered primes to
+primes_list = []
+
+# iterate until list is empty
+while number_range:
+    prime = number_range.pop()
+    primes_list.append(prime)
+    multiples = set(range(prime*2, n+1, prime))
+    number_range.difference_update(multiples)
+
+prime_count = len(primes_list)
+largest_prime = max(primes_list)
+st.write (f"There are {prime_count} prime numbers between 1 and {n}, the largest of which is {largest_prime} \n")
+st.write (f"List of primes are: {primes_list}")
+
+
+
+
 
